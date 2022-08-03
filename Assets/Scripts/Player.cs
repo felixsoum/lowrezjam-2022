@@ -1,55 +1,58 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rb2D;
-    bool isAirLock;
+    [SerializeField] CameraController cameraController;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] GameButton smashButton;
+    [SerializeField] GameObject handObject;
 
-    private void FixedUpdate()
+    Vector3 offsetToCamera;
+    const float acceleration = 3f;
+    float velocity;
+    const float MaxSpeed = 4f;
+    Vector3 originalHandLocalPos;
+
+    private void Awake()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-
-        float xForce = 0;
-        float yForce = 0;
-
-        if (x != 0)
-        {
-            xForce = x * 500f * Time.fixedDeltaTime;
-        }
-
-        if (y > 0)
-        {
-            var hits = Physics2D.RaycastAll(transform.position, Vector2.down, 0.55f);
-            bool isGrounded = false;
-            foreach (var hit in hits)
-            {
-                if (hit.collider.CompareTag("Player"))
-                {
-                    continue;
-                }
-                isGrounded = true;
-            }
-
-            if (!isGrounded)
-            {
-                isAirLock = false;
-            }
-
-            if (isGrounded)
-            {
-                yForce = 30000f * Time.fixedDeltaTime;
-                isAirLock = true;
-            }
-        }
-
-        if (x != 0 || y != 0)
-        {
-            rb2D.AddForce(new Vector2(xForce, yForce));
-        }
+        offsetToCamera = transform.position - cameraController.transform.position;
+        smashButton.OnButtonDown += OnSmashButtonDown;
+        originalHandLocalPos = handObject.transform.localPosition;
     }
 
+    private void OnSmashButtonDown(bool isDown)
+    {
+        if (!isDown)
+        {
+            return;
+        }
+        handObject.transform.localPosition = originalHandLocalPos + Vector3.down * 1;
+    }
 
+    private void Update()
+    {
+        float direction = cameraController.transform.position.x + offsetToCamera.x - transform.position.x;
+
+        if (Mathf.Abs(direction) > 0.01f)
+        {
+            velocity += Mathf.Sign(direction) * acceleration * Time.deltaTime;
+            velocity = Mathf.Clamp(velocity, -MaxSpeed, MaxSpeed);
+            transform.position += Vector3.right * velocity * Time.deltaTime;
+            float bounce = Mathf.Abs(Mathf.Sin(Time.time * 10f)) * 0.1f;
+            spriteRenderer.transform.localPosition = Vector3.up * bounce;
+        }
+        else
+        {
+            velocity *= 0.5f;
+            spriteRenderer.transform.localPosition = Vector3.zero;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnSmashButtonDown(true);
+        }
+
+        handObject.transform.localPosition = Vector3.Lerp(handObject.transform.localPosition, originalHandLocalPos, 5f * Time.deltaTime);
+    }
 }

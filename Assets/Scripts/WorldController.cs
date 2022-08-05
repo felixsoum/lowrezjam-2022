@@ -4,16 +4,28 @@ using UnityEngine;
 
 public class WorldController : MonoBehaviour
 {
-    [SerializeField] List<GameObject> worldSegments = new List<GameObject>();
+    [SerializeField] List<WorldSegment> worldSegments = new List<WorldSegment>();
     [SerializeField] CameraController cameraController;
-    int segmentIndex;
+    int segmentIndex = -1;
     float segmentDistance;
 
     private void Awake()
     {
         segmentDistance = worldSegments[1].transform.position.x - worldSegments[0].transform.position.x;
-
+        SpawnHumans();
         UpdateSegmentIndex();
+    }
+
+    void SpawnHumans()
+    {
+        for (int i = 0; i < worldSegments.Count; i++)
+        {
+            if (segmentIndex == i)
+            {
+                continue;
+            }
+            worldSegments[i].Spawn();
+        }
     }
 
     private void UpdateSegmentIndex()
@@ -54,5 +66,6 @@ public class WorldController : MonoBehaviour
         }
 
         UpdateSegmentIndex();
+        SpawnHumans();
     }
 }

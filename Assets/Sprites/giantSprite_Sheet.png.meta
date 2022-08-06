@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f76ada62425977489fb4d93caef3fb2
+guid: c0b29540bc3c6744cb495dbd889e8cbb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -142,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileSet_Sheet_0
+      name: giantSprite_Sheet_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 48
-        width: 8
-        height: 8
+        x: 21
+        y: 192
+        width: 37
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3237229460bf874c9b3a09c894c469b
-      internalID: -372543361
+      spriteID: c5d484d667aeb7d4697a32d8a0d3b3fe
+      internalID: 1323365822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet_Sheet_1
+      name: giantSprite_Sheet_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 8
-        height: 8
+        x: 101
+        y: 192
+        width: 39
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95e4c90f3663a324fae537c0985c51ba
-      internalID: -330979452
+      spriteID: a7690b1c3bbd3364babf6356df05f565
+      internalID: 1408682131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet_Sheet_2
+      name: giantSprite_Sheet_2
       rect:
         serializedVersion: 2
-        x: 24
-        y: 48
-        width: 8
-        height: 8
+        x: 33
+        y: 151
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80ef2577b45987144be9fc5fae34e120
-      internalID: 1615124541
+      spriteID: 9d1ef6e290883564da2d3d5cea4ae8f2
+      internalID: -1663619373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet_Sheet_3
+      name: giantSprite_Sheet_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
-        width: 8
-        height: 8
+        x: 113
+        y: 151
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,8 +219,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da094dcde4cdcc44484a4816c588ed89
-      internalID: 613900559
+      spriteID: c8eef1721e2cba84495c1e7597ebafc0
+      internalID: 827293584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: giantSprite_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 96
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb071d9ac2ad7fb46ab6cfb3c7481ff7
+      internalID: -740341976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: giantSprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 96
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9771036c4b29e394ab5fe244664f847f
+      internalID: -14024355
       vertices: []
       indices: 
       edges: []
@@ -236,10 +278,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TileSet_Sheet_2: 1615124541
-      TileSet_Sheet_1: -330979452
-      TileSet_Sheet_0: -372543361
-      TileSet_Sheet_3: 613900559
+      giantSprite_Sheet_1: 1408682131
+      giantSprite_Sheet_0: 1323365822
+      giantSprite_Sheet_4: -740341976
+      giantSprite_Sheet_5: -14024355
+      giantSprite_Sheet_2: -1663619373
+      giantSprite_Sheet_3: 827293584
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

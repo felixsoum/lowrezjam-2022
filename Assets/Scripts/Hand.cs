@@ -9,6 +9,8 @@ public class Hand : MonoBehaviour
         var human = collision.GetComponent<Human>();
         if (human)
         {
+            //ask if smashed button was pressed
+            
             human.Die();
         }
     }

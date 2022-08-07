@@ -6,10 +6,11 @@ public class Plants : MonoBehaviour
 {
     [SerializeField] Sprite noOutline;
     [SerializeField] Sprite withOutline;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = noOutline;
+        spriteRenderer.sprite = noOutline;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,7 +18,8 @@ public class Plants : MonoBehaviour
         var player = collision.GetComponent<Player>();
         if (player)
         {
-            GetComponent<SpriteRenderer>().sprite = withOutline;
+            player.NearbyPlant = this;
+            spriteRenderer.sprite = withOutline;
         }
     }
 
@@ -26,8 +28,8 @@ public class Plants : MonoBehaviour
         var player = collision.GetComponent<Player>();
         if (player)
         {
-            GetComponent<SpriteRenderer>().sprite = noOutline;
+            player.NearbyPlant = null;
+            spriteRenderer.sprite = noOutline;
         }
     }
-
 }

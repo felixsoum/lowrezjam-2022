@@ -1,18 +1,30 @@
 using System;
 using UnityEngine;
 
+public enum Power
+{
+    None,
+    FireFlower
+}
+
 public class Player : MonoBehaviour
 {
     [SerializeField] CameraController cameraController;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameButton smashButton;
     [SerializeField] GameObject handObject;
+    [SerializeField] GameObject fireFlower;
+    [SerializeField] ParticleSystem fireEffect;
+    [SerializeField] Sprite playerFireMode;
 
     Vector3 offsetToCamera;
     const float acceleration = 3f;
     float velocity;
     const float MaxSpeed = 4f;
     Vector3 originalHandLocalPos;
+
+    public Plants NearbyPlant { get; internal set; }
+    Power activePower = Power.None;
 
     private void Awake()
     {
@@ -27,7 +39,32 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        handObject.transform.localPosition = originalHandLocalPos + Vector3.down * 1;
+
+        if (activePower == Power.None)
+        {
+            handObject.transform.localPosition = originalHandLocalPos + Vector3.down * 1; 
+        }
+
+        if (NearbyPlant)
+        {
+            Destroy(NearbyPlant.gameObject);
+            NearbyPlant = null;
+            activePower = Power.FireFlower;
+            fireFlower.SetActive(true);
+            spriteRenderer.sprite = playerFireMode;
+        }
+        else
+        {
+            switch (activePower)
+            {
+                default:
+                case Power.None:
+                    break;
+                case Power.FireFlower:
+                    fireEffect.Play();
+                    break;
+            }
+        }
     }
 
     private void Update()

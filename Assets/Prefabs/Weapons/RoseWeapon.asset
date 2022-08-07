@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ca11efe35247b478b1faf65c6bee0c, type: 3}
+  m_Name: RoseWeapon
+  m_EditorClassIdentifier: 
+  characterBody: {fileID: -14024355, guid: c0b29540bc3c6744cb495dbd889e8cbb, type: 3}
+  equippedPrefab: {fileID: 1899691593403645388, guid: f126b55a899874b46b7011a5a53d19cd, type: 3}
+  noOutline: {fileID: -1664001643, guid: 5d70691ea0ab99047b7c82f2b5d90bf0, type: 3}
+  withOutline: {fileID: 957698410, guid: 5d70691ea0ab99047b7c82f2b5d90bf0, type: 3}
+  animatorOverride: {fileID: 22100000, guid: c2e401af5d965fa498f4595788f8d0e9, type: 2}

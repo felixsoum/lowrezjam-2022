@@ -13,9 +13,18 @@ public class Player : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameButton smashButton;
     [SerializeField] GameObject handObject;
-    [SerializeField] GameObject fireFlower;
-    [SerializeField] ParticleSystem fireEffect;
-    [SerializeField] Sprite playerFireMode;
+    
+   
+ 
+
+
+
+    [SerializeField] WeaponConfig defaultWeapon = null;
+    [SerializeField] Transform handTransform = null;
+    [SerializeField] SpriteRenderer playerBody= null;
+
+    WeaponConfig currentWeaponConfig;
+    Plants currentWeapon;
 
     Vector3 offsetToCamera;
     const float acceleration = 3f;
@@ -25,13 +34,48 @@ public class Player : MonoBehaviour
 
     public Plants NearbyPlant { get; internal set; }
     Power activePower = Power.None;
+    bool isPowerActive = false;
 
     private void Awake()
     {
+        currentWeaponConfig = defaultWeapon;
         offsetToCamera = transform.position - cameraController.transform.position;
         smashButton.OnButtonDown += OnSmashButtonDown;
         originalHandLocalPos = handObject.transform.localPosition;
     }
+
+    private void Start()
+    {
+        AttachWeapon(currentWeaponConfig);
+        currentWeapon = SetupDefaultWeapon();
+    }
+
+
+    private Plants SetupDefaultWeapon()
+    {
+
+        return AttachWeapon(defaultWeapon); ;
+    }
+
+    public void EquipWeapon(WeaponConfig weapon)
+    {
+        currentWeaponConfig = weapon;
+        currentWeapon = AttachWeapon(weapon);
+
+    }
+
+
+    private Plants AttachWeapon(WeaponConfig weapon)
+    {
+        
+        Animator animator = handTransform.GetComponent<Animator>();  
+        
+        return weapon.Spawn(handTransform, animator, playerBody);
+    }
+
+
+
+
 
     private void OnSmashButtonDown(bool isDown)
     {
@@ -40,32 +84,31 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if (activePower == Power.None)
+         if (!isPowerActive)
         {
-            handObject.transform.localPosition = originalHandLocalPos + Vector3.down * 1; 
-        }
+            
+            handObject.transform.localPosition = originalHandLocalPos + Vector3.down * 1;
+        } 
 
         if (NearbyPlant)
-        {
+        {   
+            EquipWeapon(NearbyPlant.PickUp());
             Destroy(NearbyPlant.gameObject);
             NearbyPlant = null;
-            activePower = Power.FireFlower;
-            fireFlower.SetActive(true);
-            spriteRenderer.sprite = playerFireMode;
+            isPowerActive = true;
+            
+           
         }
         else
         {
-            switch (activePower)
-            {
-                default:
-                case Power.None:
-                    break;
-                case Power.FireFlower:
-                    fireEffect.Play();
-                    break;
-            }
+
+            print("activando poder");
+            handTransform.GetComponent<Animator>().SetTrigger("Attack");
+           
         }
     }
+
+
 
     private void Update()
     {

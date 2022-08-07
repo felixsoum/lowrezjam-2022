@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sunflower_Animator
+  m_Controller: {fileID: 9100000, guid: 4c481dff2b72bc848b10fe122f9dcdaa, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: cd02ad68bda89764e8740a3713590a68, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4426cc25d3ea9574cbb29d451b46269e, type: 2}

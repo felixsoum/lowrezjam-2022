@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class Plants : MonoBehaviour
 {
-    [SerializeField] Sprite noOutline;
-    [SerializeField] Sprite withOutline;
+
     [SerializeField] SpriteRenderer spriteRenderer;
+
+    [SerializeField] WeaponConfig weapon;
+    BoxCollider2D myCollider;
 
     private void Start()
     {
-        spriteRenderer.sprite = noOutline;
+        if (GetComponent<BoxCollider2D>().isActiveAndEnabled)
+        {
+            spriteRenderer.sprite = weapon.NotOutline();
+            return;
+        }
+
+        spriteRenderer.sprite = weapon.WithOutline();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,7 +28,7 @@ public class Plants : MonoBehaviour
         if (player)
         {
             player.NearbyPlant = this;
-            spriteRenderer.sprite = withOutline;
+            spriteRenderer.sprite = weapon.WithOutline();
         }
     }
 
@@ -29,7 +38,12 @@ public class Plants : MonoBehaviour
         if (player)
         {
             player.NearbyPlant = null;
-            spriteRenderer.sprite = noOutline;
+            spriteRenderer.sprite = weapon.NotOutline();
         }
+    }
+
+    public WeaponConfig PickUp()
+    {
+        return weapon;
     }
 }

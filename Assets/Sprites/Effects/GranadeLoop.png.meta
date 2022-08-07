@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0b29540bc3c6744cb495dbd889e8cbb
+guid: e27904ae1c6495442affa5ea338d7600
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -142,169 +142,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: giantSprite_Sheet_0
+      name: burning_loop_5_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 192
-        width: 37
-        height: 38
+        x: 0
+        y: 0
+        width: 10
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5d484d667aeb7d4697a32d8a0d3b3fe
-      internalID: 1323365822
+      spriteID: 5ae7e422b1cadaa47bc4c8bdad176a8f
+      internalID: 1935514139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giantSprite_Sheet_1
+      name: burning_loop_5_1
       rect:
         serializedVersion: 2
-        x: 101
-        y: 192
-        width: 39
-        height: 38
+        x: 10
+        y: 0
+        width: 10
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7690b1c3bbd3364babf6356df05f565
-      internalID: 1408682131
+      spriteID: 4ad741b152524204e80696eaec829aeb
+      internalID: -1525714343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giantSprite_Sheet_2
+      name: burning_loop_5_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 151
-        width: 30
-        height: 30
+        x: 20
+        y: 0
+        width: 10
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d1ef6e290883564da2d3d5cea4ae8f2
-      internalID: -1663619373
+      spriteID: b5d556ddb8d9300469ca9ecd9376c2d1
+      internalID: 2079179987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giantSprite_Sheet_3
+      name: burning_loop_5_3
       rect:
         serializedVersion: 2
-        x: 113
-        y: 151
-        width: 30
-        height: 30
+        x: 30
+        y: 0
+        width: 10
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8eef1721e2cba84495c1e7597ebafc0
-      internalID: 827293584
+      spriteID: a45955c477bb2084d8b189fe7ec2f5a9
+      internalID: -2141789973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giantSprite_Sheet_4
+      name: burning_loop_5_4
       rect:
         serializedVersion: 2
-        x: 21
-        y: 96
-        width: 30
-        height: 38
+        x: 40
+        y: 0
+        width: 10
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb071d9ac2ad7fb46ab6cfb3c7481ff7
-      internalID: -740341976
+      spriteID: 6ede97838f722c6468834681a21b714b
+      internalID: 274428114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giantSprite_Sheet_5
+      name: burning_loop_5_5
       rect:
         serializedVersion: 2
-        x: 101
-        y: 96
-        width: 30
-        height: 38
+        x: 50
+        y: 0
+        width: 10
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9771036c4b29e394ab5fe244664f847f
-      internalID: -14024355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: giantSprite_Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 32
-        width: 30
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7b8d681fe6fc98488bbd94ff8ff7ea9
-      internalID: 2127229708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: giantSprite_Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 32
-        width: 30
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 673203e12fee23c428e58fe22c9b483b
-      internalID: 1305878596
+      spriteID: f6547e7fab974ca488213fd0f8d97c53
+      internalID: -1758881434
       vertices: []
       indices: 
       edges: []
@@ -320,14 +278,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      giantSprite_Sheet_1: 1408682131
-      giantSprite_Sheet_7: 1305878596
-      giantSprite_Sheet_0: 1323365822
-      giantSprite_Sheet_4: -740341976
-      giantSprite_Sheet_6: 2127229708
-      giantSprite_Sheet_5: -14024355
-      giantSprite_Sheet_2: -1663619373
-      giantSprite_Sheet_3: 827293584
+      burning_loop_5_1: -1525714343
+      burning_loop_5_4: 274428114
+      burning_loop_5_5: -1758881434
+      burning_loop_5_3: -2141789973
+      burning_loop_5_0: 1935514139
+      burning_loop_5_2: 2079179987
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

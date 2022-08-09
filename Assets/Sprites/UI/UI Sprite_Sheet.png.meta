@@ -465,7 +465,7 @@ TextureImporter:
         width: 29
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -486,7 +486,7 @@ TextureImporter:
         width: 29
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -494,6 +494,27 @@ TextureImporter:
       bones: []
       spriteID: 43fd246e636d5124caf846fe0fca3e8d
       internalID: -1273269250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Sprite_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 11
+        width: 54
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1cde6a153758440a46fc9a55315bc2
+      internalID: 849410734
       vertices: []
       indices: 
       edges: []
@@ -523,6 +544,7 @@ TextureImporter:
       UI Sprite_Sheet_12: -352736076
       UI Sprite_Sheet_5: 372742289
       UI Sprite_Sheet_10: 920903678
+      UI Sprite_Sheet_17: 849410734
       UI Sprite_Sheet_1: 705387393
       UI Sprite_Sheet_6: -319213522
       UI Sprite_Sheet_4: -2128551695

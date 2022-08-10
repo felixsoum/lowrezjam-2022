@@ -150,7 +150,7 @@ TextureImporter:
         width: 4
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,7 +171,7 @@ TextureImporter:
         width: 10
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,7 +192,7 @@ TextureImporter:
         width: 5
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,7 +213,7 @@ TextureImporter:
         width: 10
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,7 +234,7 @@ TextureImporter:
         width: 12
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,6 +242,90 @@ TextureImporter:
       bones: []
       spriteID: 273ad7275b159004b8215ae227b823bf
       internalID: 957698410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plants and trees Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 153
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa92be2d9bb188a4b8eb84df7ddb5722
+      internalID: 687589779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plants and trees Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 152
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4275c68c569341419265971f2619962
+      internalID: 1516946805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plants and trees Sprite_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 153
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4d154ebb60ec44e94da993a76aa958
+      internalID: 796436534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plants and trees Sprite_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 152
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ff371d5b493884dbadf560be0f8787
+      internalID: 315743387
       vertices: []
       indices: 
       edges: []
@@ -259,8 +343,12 @@ TextureImporter:
     nameFileIdTable:
       Plants and trees Sprite_Sheet_1: -987036799
       Plants and trees Sprite_Sheet_0: 738917000
+      Plants and trees Sprite_Sheet_7: 796436534
       Plants and trees Sprite_Sheet_2: -2037443211
+      Plants and trees Sprite_Sheet_8: 315743387
+      Plants and trees Sprite_Sheet_5: 687589779
       Plants and trees Sprite_Sheet_4: 957698410
+      Plants and trees Sprite_Sheet_6: 1516946805
       Plants and trees Sprite_Sheet_3: -1664001643
   spritePackingTag: 
   pSDRemoveMatte: 0

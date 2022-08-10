@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterBody: {fileID: 2127229708, guid: c0b29540bc3c6744cb495dbd889e8cbb, type: 3}
   equippedPrefab: {fileID: 572952537857923221, guid: 12b0d3aae33121b49a1a01b18e2220b5, type: 3}
-  noOutline: {fileID: -1664001643, guid: 5d70691ea0ab99047b7c82f2b5d90bf0, type: 3}
-  withOutline: {fileID: 957698410, guid: 5d70691ea0ab99047b7c82f2b5d90bf0, type: 3}
+  noOutline: {fileID: 796436534, guid: 5d70691ea0ab99047b7c82f2b5d90bf0, type: 3}
+  withOutline: {fileID: 315743387, guid: 5d70691ea0ab99047b7c82f2b5d90bf0, type: 3}
   animatorOverride: {fileID: 22100000, guid: b7fe39099c9637c419f27723ab50d4bd, type: 2}

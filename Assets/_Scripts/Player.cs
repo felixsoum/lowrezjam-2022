@@ -9,19 +9,19 @@ public enum Power
 
 public class Player : MonoBehaviour
 {
+
+    [Header("Player")]
     [SerializeField] CameraController cameraController;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameButton smashButton;
     [SerializeField] GameObject handObject;
-    
-   
- 
-
-
-
     [SerializeField] WeaponConfig defaultWeapon = null;
     [SerializeField] Transform handTransform = null;
     [SerializeField] SpriteRenderer playerBody= null;
+
+    [Header("Sounds")]
+    [SerializeField] GameObject stepsSounds;
+    [SerializeField] GameObject pickupSounds;
 
     WeaponConfig currentWeaponConfig;
     Plants currentWeapon;
@@ -96,6 +96,7 @@ public class Player : MonoBehaviour
             Destroy(NearbyPlant.gameObject);
             NearbyPlant = null;
             isPowerActive = true;
+            pickupSounds.GetComponent<AudioSource>().Play();
             
            
         }
@@ -104,6 +105,7 @@ public class Player : MonoBehaviour
 
             print("activando poder");
             handTransform.GetComponent<Animator>().SetTrigger("Attack");
+            handTransform.GetComponentInChildren<AudioSource>().Play();
            
         }
     }
@@ -121,11 +123,13 @@ public class Player : MonoBehaviour
             transform.position += Vector3.right * velocity * Time.deltaTime;
             float bounce = Mathf.Abs(Mathf.Sin(Time.time * 10f)) * 0.1f;
             spriteRenderer.transform.localPosition = Vector3.up * bounce;
+            stepsSounds.SetActive(true);
         }
         else
         {
             velocity *= 0.5f;
             spriteRenderer.transform.localPosition = Vector3.zero;
+            stepsSounds.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

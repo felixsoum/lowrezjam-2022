@@ -11,6 +11,7 @@ public class SceneManagerScript : MonoBehaviour
     public void LoadStartMenu()
     {
         StartCoroutine(LoadLevel("StartMenu"));
+        FindObjectOfType<AudioManager>().ChangetoMenuMusic();
 
 
 
@@ -19,6 +20,7 @@ public class SceneManagerScript : MonoBehaviour
     public void LoadGame()
     {
         StartCoroutine(LoadLevel("Main"));
+         FindObjectOfType<AudioManager>().ChangetoGameMusic();
 
     }
 

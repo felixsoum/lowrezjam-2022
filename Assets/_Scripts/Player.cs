@@ -15,6 +15,12 @@ public class Player : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameButton smashButton;
     [SerializeField] GameObject handObject;
+    
+   
+ 
+
+
+
     [SerializeField] WeaponConfig defaultWeapon = null;
     [SerializeField] Transform handTransform = null;
     [SerializeField] SpriteRenderer playerBody= null;
@@ -139,4 +145,10 @@ public class Player : MonoBehaviour
 
         handObject.transform.localPosition = Vector3.Lerp(handObject.transform.localPosition, originalHandLocalPos, 5f * Time.deltaTime);
     }
+
+    internal void OnWeaponHit(Enemy enemy)
+    {
+        enemy.Damage(1);
+    }
+
 }

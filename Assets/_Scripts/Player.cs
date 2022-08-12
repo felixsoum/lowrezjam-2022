@@ -15,15 +15,15 @@ public class Player : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameButton smashButton;
     [SerializeField] GameObject handObject;
-    
-   
- 
+
+
+
 
 
 
     [SerializeField] WeaponConfig defaultWeapon = null;
     [SerializeField] Transform handTransform = null;
-    [SerializeField] SpriteRenderer playerBody= null;
+    [SerializeField] SpriteRenderer playerBody = null;
 
     [Header("Sounds")]
     [SerializeField] GameObject stepsSounds;
@@ -73,9 +73,9 @@ public class Player : MonoBehaviour
 
     private Plants AttachWeapon(WeaponConfig weapon)
     {
-        
-        Animator animator = handTransform.GetComponent<Animator>();  
-        
+
+        Animator animator = handTransform.GetComponent<Animator>();
+
         return weapon.Spawn(handTransform, animator, playerBody);
     }
 
@@ -90,29 +90,30 @@ public class Player : MonoBehaviour
             return;
         }
 
-         if (!isPowerActive)
+        if (!isPowerActive)
         {
-            
+
             handObject.transform.localPosition = originalHandLocalPos + Vector3.down * 1;
-        } 
+        }
 
         if (NearbyPlant)
-        {   
+        {
             EquipWeapon(NearbyPlant.PickUp());
-            Destroy(NearbyPlant.gameObject);
+            NearbyPlant.gameObject.SetActive(false);
             NearbyPlant = null;
             isPowerActive = true;
             pickupSounds.GetComponent<AudioSource>().Play();
-            
-           
+
+
         }
         else
         {
 
             print("activando poder");
             handTransform.GetComponent<Animator>().SetTrigger("Attack");
-            handTransform.GetComponentInChildren<AudioSource>().Play();
-           
+            AudioSource weaponSound =handTransform.GetComponentInChildren<AudioSource>();
+            if(weaponSound == null) return;
+            weaponSound.Play();
         }
     }
 

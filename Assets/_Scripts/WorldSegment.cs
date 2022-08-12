@@ -21,7 +21,7 @@ public class WorldSegment : MonoBehaviour
         if (!isBuildingAlive)
         {
             isBuildingAlive = true;
-            var building = Instantiate(buildingPrefab, CreateSpawnPos(2.82f), Quaternion.identity, transform);
+            var building = Instantiate(buildingPrefab, CreateSpawnPos(3.9f), Quaternion.identity, transform);
             building.GetComponent<Building>().OwnerSegment = this;
         }
     }

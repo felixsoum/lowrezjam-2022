@@ -13,6 +13,13 @@ public class SceneManagerScript : MonoBehaviour
         StartCoroutine(LoadLevel("StartMenu"));
         FindObjectOfType<AudioManager>().ChangetoMenuMusic();
 
+    }
+
+     public void LoadFinalMenu()
+    {
+        StartCoroutine(LoadLevel("FinalScreen"));
+        FindObjectOfType<AudioManager>().ChangetoMenuMusic();
+
 
 
     }

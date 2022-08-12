@@ -507,7 +507,7 @@ TextureImporter:
         width: 54
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -515,6 +515,48 @@ TextureImporter:
       bones: []
       spriteID: af1cde6a153758440a46fc9a55315bc2
       internalID: 849410734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Sprite_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 9
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bf0dccc1648d640810dbf05fb8c04f
+      internalID: -89396619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Sprite_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 8
+        width: 52
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089bd2d7c762a654ab01973852521124
+      internalID: -1464578853
       vertices: []
       indices: 
       edges: []
@@ -536,6 +578,7 @@ TextureImporter:
       UI Sprite_Sheet_8: 437452197
       UI Sprite_Sheet_11: -1772650165
       UI Sprite_Sheet_2: -225771247
+      UI Sprite_Sheet_19: -1464578853
       UI Sprite_Sheet_16: -1273269250
       UI Sprite_Sheet_15: -1857589206
       UI Sprite_Sheet_3: -91751129
@@ -543,6 +586,7 @@ TextureImporter:
       UI Sprite_Sheet_9: -774364076
       UI Sprite_Sheet_12: -352736076
       UI Sprite_Sheet_5: 372742289
+      UI Sprite_Sheet_18: -89396619
       UI Sprite_Sheet_10: 920903678
       UI Sprite_Sheet_17: 849410734
       UI Sprite_Sheet_1: 705387393

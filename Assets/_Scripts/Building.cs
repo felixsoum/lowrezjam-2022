@@ -11,5 +11,6 @@ public class Building : Enemy
             OwnerSegment.OnBuildingDeath();
         }
         base.OnDeath();
+        FindObjectOfType<ScoreKeeper>().AddBuildingScore();
     }
 }

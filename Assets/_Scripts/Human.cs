@@ -9,5 +9,6 @@ public class Human : Enemy
             OwnerSegment.OnHumanDeath(); 
         }
         base.OnDeath();
+         FindObjectOfType<ScoreKeeper>().AddHumanScore();
     }
 }

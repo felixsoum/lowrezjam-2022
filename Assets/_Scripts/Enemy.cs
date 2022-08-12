@@ -47,6 +47,9 @@ public class Enemy : MonoBehaviour
 
     protected virtual void OnDeath()
     {
+        
         Destroy(gameObject);
     }
+
+    
 }

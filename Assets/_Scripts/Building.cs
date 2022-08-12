@@ -1,12 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Human : Enemy
+public class Building : Enemy
 {
     protected override void OnDeath()
     {
         if (OwnerSegment)
         {
-            OwnerSegment.OnHumanDeath(); 
+            OwnerSegment.OnBuildingDeath();
         }
         base.OnDeath();
     }

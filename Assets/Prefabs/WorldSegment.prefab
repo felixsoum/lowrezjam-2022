@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   humanPrefab: {fileID: 2560196227085484867, guid: 8ee9ed1cd0363ab4d907566a37afd3d1, type: 3}
+  buildingPrefab: {fileID: 7275688302729665306, guid: 1364f6ebd232639428fbe338250dea14, type: 3}
   humanMaxCount: 3
 --- !u!1 &3962907551342175335
 GameObject:

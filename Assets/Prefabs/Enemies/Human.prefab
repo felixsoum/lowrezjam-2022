@@ -49,6 +49,16 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2670723886058465751}
   deathPrefab: {fileID: 1074917567534310334, guid: 6f3fd56a462fb994f90f241cd74cdac6, type: 3}
   maxHp: 1
+  moveSpeed: 2
+  sprites:
+  - {fileID: 1952964316, guid: a2215eeb2a3b37b4aab169b90a10ab2b, type: 3}
+  - {fileID: -270227286, guid: a2215eeb2a3b37b4aab169b90a10ab2b, type: 3}
+  - {fileID: 321422130, guid: a2215eeb2a3b37b4aab169b90a10ab2b, type: 3}
+  - {fileID: 1788651857, guid: a2215eeb2a3b37b4aab169b90a10ab2b, type: 3}
+  - {fileID: 174967917, guid: a2215eeb2a3b37b4aab169b90a10ab2b, type: 3}
+  - {fileID: -1611861848, guid: a2215eeb2a3b37b4aab169b90a10ab2b, type: 3}
+  - {fileID: 1951642839, guid: a2215eeb2a3b37b4aab169b90a10ab2b, type: 3}
+  - {fileID: 858077605, guid: a2215eeb2a3b37b4aab169b90a10ab2b, type: 3}
 --- !u!212 &2670723886058465751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -89,7 +99,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1952964316, guid: a2215eeb2a3b37b4aab169b90a10ab2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

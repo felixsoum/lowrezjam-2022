@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class WorldSegment : MonoBehaviour
@@ -7,6 +6,7 @@ public class WorldSegment : MonoBehaviour
     [SerializeField] GameObject buildingPrefab;
     [SerializeField] int humanMaxCount = 3;
     int humanCurrentCount;
+    int humanSpriteOrder;
     bool isBuildingAlive;
 
     public void Spawn()
@@ -14,8 +14,11 @@ public class WorldSegment : MonoBehaviour
         while (humanCurrentCount < 3)
         {
             humanCurrentCount++;
-            var human = Instantiate(humanPrefab, CreateSpawnPos(1.82f), Quaternion.identity, transform);
-            human.GetComponent<Human>().OwnerSegment = this;
+            var human = Instantiate(humanPrefab, CreateSpawnPos(1.94f), Quaternion.identity, transform).GetComponent<Human>();
+            human.OwnerSegment = this;
+            humanSpriteOrder %= 3;
+            human.SetSpriteOrder(humanSpriteOrder);
+            humanSpriteOrder++;
         }
 
         if (!isBuildingAlive)
@@ -39,9 +42,11 @@ public class WorldSegment : MonoBehaviour
     Vector3 CreateSpawnPos(float y)
     {
         var pos = transform.position;
-        pos.x += UnityEngine.Random.Range(-10f, 10f);
+        pos.x += GetRandomOffsetX();
         pos.y = y;
         return pos;
     }
+
+    public float GetRandomOffsetX() => UnityEngine.Random.Range(-10f, 10f);
 
 }

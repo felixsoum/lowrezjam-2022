@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] protected SpriteRenderer spriteRenderer;
     [SerializeField] GameObject deathPrefab;
     [SerializeField] int maxHp = 6;
 
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         hp = maxHp;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (hitValue > 0)
         {
@@ -50,6 +50,4 @@ public class Enemy : MonoBehaviour
         
         Destroy(gameObject);
     }
-
-    
 }

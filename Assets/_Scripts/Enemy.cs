@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int maxHp = 6;
 
     public WorldSegment OwnerSegment { get; set; }
-    public int Difficulty { get; set; }
+    public int Score { get; set; }
     Material material;
     float hitValue;
     protected int hp;
@@ -46,8 +46,8 @@ public class Enemy : MonoBehaviour
 
     public void SetDifficulty(int difficulty)
     {
-        Difficulty = difficulty;
-        hp = maxHp * (Difficulty + 1);
+        hp = maxHp * (difficulty + 1);
+        Score = hp * 10;
     }
 
     protected virtual void OnDeath()

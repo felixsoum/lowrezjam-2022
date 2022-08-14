@@ -14,7 +14,7 @@ public class ScoreKeeper : MonoBehaviour
 
     public static void AddBuildingScore(int buildingScore = 10)
     {
-        score += 10;
+        score += buildingScore * 2;
     }
 
     public static int GetScore() => score;

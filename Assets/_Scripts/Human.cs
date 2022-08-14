@@ -36,6 +36,6 @@ public class Human : Enemy
         }
         base.OnDeath();
 
-        ScoreKeeper.AddHumanScore();
+        ScoreKeeper.AddHumanScore(Score);
     }
 }

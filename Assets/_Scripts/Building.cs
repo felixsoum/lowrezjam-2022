@@ -8,6 +8,6 @@ public class Building : Enemy
         }
         base.OnDeath();
 
-        ScoreKeeper.AddBuildingScore();
+        ScoreKeeper.AddBuildingScore(Score);
     }
 }

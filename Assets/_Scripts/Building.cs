@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Building : Enemy
 {
     protected override void OnDeath()
@@ -11,6 +7,7 @@ public class Building : Enemy
             OwnerSegment.OnBuildingDeath();
         }
         base.OnDeath();
-        FindObjectOfType<ScoreKeeper>().AddBuildingScore();
+
+        ScoreKeeper.AddBuildingScore();
     }
 }

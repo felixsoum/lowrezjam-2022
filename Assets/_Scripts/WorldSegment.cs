@@ -5,6 +5,9 @@ public class WorldSegment : MonoBehaviour
     [SerializeField] GameObject humanPrefab;
     [SerializeField] GameObject buildingPrefab;
     [SerializeField] int humanMaxCount = 3;
+
+    public WorldController Controller { get; set; }
+
     int humanCurrentCount;
     int humanSpriteOrder;
     bool isBuildingAlive;
@@ -17,6 +20,7 @@ public class WorldSegment : MonoBehaviour
             var human = Instantiate(humanPrefab, CreateSpawnPos(1.94f), Quaternion.identity, transform).GetComponent<Human>();
             human.OwnerSegment = this;
             humanSpriteOrder %= 3;
+            human.SetDifficulty(Controller.Difficulty);
             human.SetSpriteOrder(humanSpriteOrder);
             humanSpriteOrder++;
         }
@@ -24,8 +28,9 @@ public class WorldSegment : MonoBehaviour
         if (!isBuildingAlive)
         {
             isBuildingAlive = true;
-            var building = Instantiate(buildingPrefab, CreateSpawnPos(3.9f), Quaternion.identity, transform);
-            building.GetComponent<Building>().OwnerSegment = this;
+            var building = Instantiate(buildingPrefab, CreateSpawnPos(3.9f), Quaternion.identity, transform).GetComponent<Building>();
+            building.SetDifficulty(Controller.Difficulty);
+            building.OwnerSegment = this;
         }
     }
 

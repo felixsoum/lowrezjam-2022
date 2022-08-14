@@ -8,15 +8,21 @@ public class WorldController : MonoBehaviour
     [SerializeField] CameraController cameraController;
     int segmentIndex = -1;
     float segmentDistance;
+    public int Difficulty { get; set; }
 
     private void Awake()
     {
+        foreach (var segment in worldSegments)
+        {
+            segment.Controller = this;
+        }
+
         segmentDistance = worldSegments[1].transform.position.x - worldSegments[0].transform.position.x;
-        SpawnHumans();
+        SpawnWorldEnemies();
         UpdateSegmentIndex();
     }
 
-    void SpawnHumans()
+    void SpawnWorldEnemies()
     {
         for (int i = 0; i < worldSegments.Count; i++)
         {
@@ -55,6 +61,7 @@ public class WorldController : MonoBehaviour
             temp.transform.position = worldSegments[0].transform.position + Vector3.left * segmentDistance;
             worldSegments.Insert(0, temp);
             segmentIndex++;
+            Difficulty++;
         }
         else if (segmentIndex == worldSegments.Count - 1)
         {
@@ -63,9 +70,10 @@ public class WorldController : MonoBehaviour
             worldSegments.RemoveAt(0);
             worldSegments.Add(temp);
             segmentIndex--;
+            Difficulty++;
         }
 
         UpdateSegmentIndex();
-        SpawnHumans();
+        SpawnWorldEnemies();
     }
 }

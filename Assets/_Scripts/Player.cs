@@ -16,11 +16,6 @@ public class Player : MonoBehaviour
     [SerializeField] GameButton smashButton;
     [SerializeField] GameObject handObject;
 
-
-
-
-
-
     [SerializeField] WeaponConfig defaultWeapon = null;
     [SerializeField] Transform handTransform = null;
     [SerializeField] SpriteRenderer playerBody = null;
@@ -54,34 +49,27 @@ public class Player : MonoBehaviour
     {
         AttachWeapon(currentWeaponConfig);
         currentWeapon = SetupDefaultWeapon();
-    }
 
+        ScoreKeeper.Reset();
+    }
 
     private Plants SetupDefaultWeapon()
     {
-
-        return AttachWeapon(defaultWeapon); ;
+        return AttachWeapon(defaultWeapon);
     }
 
     public void EquipWeapon(WeaponConfig weapon)
     {
         currentWeaponConfig = weapon;
         currentWeapon = AttachWeapon(weapon);
-
     }
-
 
     private Plants AttachWeapon(WeaponConfig weapon)
     {
-
         Animator animator = handTransform.GetComponent<Animator>();
 
         return weapon.Spawn(handTransform, animator, playerBody);
     }
-
-
-
-
 
     private void OnSmashButtonDown(bool isDown)
     {
@@ -103,12 +91,9 @@ public class Player : MonoBehaviour
             NearbyPlant = null;
             isPowerActive = true;
             pickupSounds.GetComponent<AudioSource>().Play();
-
-
         }
         else
         {
-
             print("activando poder");
             handTransform.GetComponent<Animator>().SetTrigger("Attack");
             AudioSource weaponSound =handTransform.GetComponentInChildren<AudioSource>();

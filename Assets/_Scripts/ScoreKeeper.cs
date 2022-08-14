@@ -1,31 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    int humanScore;
-    int buildingsScore;
+    static int score;
 
-    public void AddHumanScore()
+    public static void AddHumanScore(int humanScore = 1)
     {
-        humanScore++;
-
-    }
-    public void AddBuildingScore()
-    {
-       buildingsScore++;
-
+        score += humanScore;
     }
 
-
-    public int GetHumanScore()
+    public static void AddBuildingScore(int buildingScore = 10)
     {
-        return humanScore;
-    }
-    public int GetBuildingScore()
-    {
-        return buildingsScore;
+        score += 10;
     }
 
+    public static int GetScore() => score;
+
+    internal static void Reset()
+    {
+        score = 0;
+    }
 }

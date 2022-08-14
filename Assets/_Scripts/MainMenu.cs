@@ -1,26 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI humanScore;
-    [SerializeField] TextMeshProUGUI buildingScore;
+    [SerializeField] TextMeshProUGUI scoreText;
 
     public void LoadGamePress()
     {
         FindObjectOfType<SceneManagerScript>().LoadGame();
     }
+
     private void Start()
     {
-      if(humanScore != null)
-      {
-         humanScore.text = "x"+  FindObjectOfType<ScoreKeeper>().GetHumanScore().ToString();
-      }
-       if(buildingScore != null)
-      {
-         buildingScore.text = "x"+  FindObjectOfType<ScoreKeeper>().GetBuildingScore().ToString();
-      }
+        scoreText.text = ScoreKeeper.GetScore().ToString();
     }
 }
